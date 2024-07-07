@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import { EventProps } from "./interface";
 import { format } from "date-fns";
+import { EventCard } from "@/components/cards/event-cards";
 
 export default function EventTrackerComponent() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -26,15 +27,10 @@ export default function EventTrackerComponent() {
 
   const EventCards = () => {
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-3">
         {events.map((event: EventProps) => {
           console.log(event.eventName);
-          return (
-            <div>
-              <span>{event.eventName}</span>
-              <span>{format(event.eventDate, "PPP")}</span>
-            </div>
-          );
+          return <EventCard props={event} />;
         })}
       </div>
     );
