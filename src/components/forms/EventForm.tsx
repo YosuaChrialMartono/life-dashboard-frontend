@@ -69,7 +69,6 @@ export function EventForm({ handleSubmit }: { handleSubmit: Function }) {
               <FormControl>
                 <Input placeholder="21st birthday" {...field} />
               </FormControl>
-              <FormDescription>This is your event's name</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -109,7 +108,6 @@ export function EventForm({ handleSubmit }: { handleSubmit: Function }) {
                   />
                 </PopoverContent>
               </Popover>
-              <FormDescription>Pick your event's date</FormDescription>
               <FormMessage />
             </FormItem>
           )}

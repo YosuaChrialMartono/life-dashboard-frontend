@@ -28,9 +28,8 @@ export default function EventTrackerComponent() {
   const EventCards = () => {
     return (
       <div className="flex flex-col gap-3">
-        {events.map((event: EventProps) => {
-          console.log(event.eventName);
-          return <EventCard props={event} />;
+        {events.map((event: EventProps, index) => {
+          return <EventCard key={`${index}-event-card`} props={event} />;
         })}
       </div>
     );

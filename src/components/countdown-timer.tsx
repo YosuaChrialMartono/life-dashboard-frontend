@@ -28,7 +28,7 @@ export const CountdownTimer = (endDate: string, paused: boolean) => {
       }, 1000);
       return () => clearInterval(interval);
     }
-  }, [paused]);
+  }, [paused, parsedEndDate, timeLeft]);
 
   return {
     days: (time / DAY).toFixed(),
