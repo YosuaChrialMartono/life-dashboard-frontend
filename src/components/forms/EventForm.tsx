@@ -28,7 +28,13 @@ const formSchema = z.object({
   }),
 });
 
-export function EventForm({ handleSubmit }: { handleSubmit: Function }) {
+export function EventForm({
+  handleSubmit,
+  className,
+}: {
+  handleSubmit: Function;
+  className: string;
+}) {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -59,7 +65,7 @@ export function EventForm({ handleSubmit }: { handleSubmit: Function }) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className={className}>
         <FormField
           control={form.control}
           name="eventName"

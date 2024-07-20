@@ -59,6 +59,7 @@ export default function EventTrackerComponent() {
                 setDoRefetchEvents(true);
                 setDialogOpen(false);
               }}
+              className="space-y-8"
             />
           </div>
         </DialogContent>
