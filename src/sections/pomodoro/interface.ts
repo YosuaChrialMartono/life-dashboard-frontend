@@ -1,4 +1,4 @@
-export type TimerSettingSliderItem = {
+export interface TimerSettingSliderItem {
     name: "workDuration" | "shortRestDuration" | "longRestDuration",
     title: string,
     max: number,
