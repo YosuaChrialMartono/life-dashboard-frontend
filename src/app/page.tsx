@@ -74,9 +74,10 @@ import {
 } from "@/components/ui/tooltip";
 import SideNav from "@/sections/navigation/side-nav/SideNav";
 import { NavigationRoutes } from "@/sections/navigation/navigationsRoute";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import MobileSideNav from "@/sections/navigation/mobile-side-nav/MobileSideNav";
+import RouteBreadcrumbHeader from "@/sections/breadcrumbs/RouteBreadcrumbHeader";
 
 export default function Dashboard() {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -105,25 +106,7 @@ export default function Dashboard() {
               </Button>
             </MobileSideNav>
 
-            {/* <Breadcrumb className="hidden md:flex">
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="#">Dashboard</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="#">Orders</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>Recent Orders</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb> */}
+            <RouteBreadcrumbHeader />
             {/* <div className="relative ml-auto flex-1 md:grow-0">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
