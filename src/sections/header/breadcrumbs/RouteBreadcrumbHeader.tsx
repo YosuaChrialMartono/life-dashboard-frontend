@@ -10,8 +10,6 @@ import { usePathname } from "next/navigation";
 
 export default function RouteBreadcrumbHeader() {
   const path = usePathname();
-  console.log(path);
-  console.log(path.split("/"));
   const BreadCrumbLinks = path.split("/").slice(1);
   let linkString = "";
   return (
@@ -26,14 +24,9 @@ export default function RouteBreadcrumbHeader() {
         ) : (
           BreadCrumbLinks.map((item, index) => {
             return (
-              <BreadcrumbItem>
+              <BreadcrumbItem key={`${index}-breadcrumb-item`}>
                 <BreadcrumbLink asChild>
-                  <Link
-                    href={`${linkString}/${item}`}
-                    key={`${index}-breadcrumb-item`}
-                  >
-                    {item}
-                  </Link>
+                  <Link href={`${linkString}/${item}`}>{item}</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
             );

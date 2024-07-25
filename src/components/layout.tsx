@@ -12,18 +12,20 @@ export default function Layout({ children }: { children: ReactNode }) {
     setIsCollapsed(!isCollapsed);
   };
   return (
-    <TooltipProvider delayDuration={0}>
-      <div className="size-full flex flex-row bg-muted/40">
-        <SideNav
-          links={NavigationRoutes}
-          isCollapsed={isCollapsed}
-          toggleMenu={toggleMenu}
-        />
-        <div className="flex flex-col sm:gap-4 sm:py-4 size-full overflow-auto">
-          <Header />
-          <main className="h-full overflow-auto">{children}</main>
+    <main className="size-full">
+      <TooltipProvider delayDuration={0}>
+        <div className="size-full flex flex-row bg-muted/40">
+          <SideNav
+            links={NavigationRoutes}
+            isCollapsed={isCollapsed}
+            toggleMenu={toggleMenu}
+          />
+          <div className="flex flex-col sm:gap-4 sm:py-4 size-full overflow-auto">
+            <Header />
+            <div className="flex-grow overflow-auto">{children}</div>
+          </div>
         </div>
-      </div>
-    </TooltipProvider>
+      </TooltipProvider>
+    </main>
   );
 }
