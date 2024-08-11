@@ -41,16 +41,4 @@ export const NavigationRoutes: NavRouteItem[] = [
     startIcon: TimerReset,
     endIcon: null,
   },
-  {
-    title: "Projects",
-    link: "/projects",
-    startIcon: FolderDot,
-    endIcon: null,
-  },
-  {
-    title: "Tasks",
-    link: "/tasks",
-    startIcon: SquareCheck,
-    endIcon: null,
-  },
 ];
