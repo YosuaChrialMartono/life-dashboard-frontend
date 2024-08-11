@@ -28,6 +28,13 @@ export const NavigationRoutes: NavRouteItem[] = [
     startIcon: LayoutDashboard,
     endIcon: null,
   },
+
+  {
+    title: "Calendar",
+    link: "/calendar",
+    startIcon: CalendarDays,
+    endIcon: null,
+  },
   {
     title: "Pomodoro Timer",
     link: "/pomodoro",
@@ -44,18 +51,6 @@ export const NavigationRoutes: NavRouteItem[] = [
     title: "Tasks",
     link: "/tasks",
     startIcon: SquareCheck,
-    endIcon: null,
-  },
-  {
-    title: "Notifications",
-    link: "/notifications",
-    startIcon: BellRing,
-    endIcon: null,
-  },
-  {
-    title: "Calendar",
-    link: "/calendar",
-    startIcon: CalendarDays,
     endIcon: null,
   },
 ];

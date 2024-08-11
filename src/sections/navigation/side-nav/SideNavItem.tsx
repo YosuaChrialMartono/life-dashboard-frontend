@@ -28,11 +28,13 @@ export default function SideNavItem({
         href={link}
         className={cn(
           buttonVariants({ variant: "default", size: "sm" }),
-          "dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white",
-          "justify-start"
+          "dark:bg-background dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white",
+          "justify-start",
+          "w-full",
+          active ? "dark:bg-foreground dark:text-background" : ""
         )}
       >
-        <data.startIcon className="mr-2 h-4 w-4" />
+        <data.startIcon className="mr-2 h-6 w-6" />
         {title}
         {data.endIcon && (
           <span className={cn("ml-auto", "text-background dark:text-white")}>

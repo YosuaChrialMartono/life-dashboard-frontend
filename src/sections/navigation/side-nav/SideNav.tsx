@@ -32,21 +32,20 @@ export default function SideNav({ links, isCollapsed, toggleMenu }: NavProps) {
         )}
       >
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
-          <Link
-            href="#"
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-foreground transition-colors md:h-8 md:w-8"
+          <Button
+            size="icon"
+            variant={"secondary"}
+            onClick={() => {
+              toggleMenu();
+            }}
+            className={cn(
+              "flex h-9 w-9 items-center justify-center rounded-lg text-foreground transition-colors md:h-8 md:w-8",
+              !isCollapsed && "justify-start w-full px-4"
+            )}
           >
-            <Button
-              size="icon"
-              variant={"secondary"}
-              onClick={() => {
-                toggleMenu();
-              }}
-            >
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle Menu</span>
-            </Button>
-          </Link>
+            <Menu className="h-5 w-5" />
+            <span className="sr-only">Toggle Menu</span>
+          </Button>
           {sideNavContent}
         </nav>
         <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
@@ -55,7 +54,10 @@ export default function SideNav({ links, isCollapsed, toggleMenu }: NavProps) {
               <TooltipTrigger asChild>
                 <Link
                   href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                  className={cn(
+                    "flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8",
+                    !isCollapsed && "justify-start w-full px-4"
+                  )}
                 >
                   <Settings className="h-5 w-5" />
                   <span className="sr-only">Settings</span>
