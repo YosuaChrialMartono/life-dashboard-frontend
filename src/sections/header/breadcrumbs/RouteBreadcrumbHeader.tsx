@@ -18,7 +18,9 @@ export default function RouteBreadcrumbHeader() {
         {BreadCrumbLinks[0] == "" ? (
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href={""}>Dashboard</Link>
+              <Link href={""} className="text-foreground">
+                Dashboard
+              </Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
         ) : (
@@ -26,7 +28,12 @@ export default function RouteBreadcrumbHeader() {
             return (
               <BreadcrumbItem key={`${index}-breadcrumb-item`}>
                 <BreadcrumbLink asChild>
-                  <Link href={`${linkString}/${item}`}>{item}</Link>
+                  <Link
+                    href={`${linkString}/${item}`}
+                    className="text-foreground"
+                  >
+                    {item}
+                  </Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
             );

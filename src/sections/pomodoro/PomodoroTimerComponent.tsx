@@ -62,14 +62,12 @@ export default function PomodoroTimerComponent() {
   }, [pause, arrayOfTime]);
 
   return (
-    <div className="size-full flex flex-col lg:flex-row gap-16 justify-center items-center">
+    <div className="size-full flex flex-col lg:flex-row gap-16 justify-center items-start py-16 px-10">
       <div
         id="timer-section"
-        className="flex flex-col w-full xl:w-4/5 gap-4 justify-center items-center"
+        className="flex flex-col w-full xl:w-4/5 h-full gap-4 justify-center items-center"
       >
-        <span className={`font-extrabold text-5xl lg:text-6xl xl:text-9xl`}>
-          {time}
-        </span>
+        <span className={`font-extrabold text-5xl md:text-9xl`}>{time}</span>
       </div>
       <div
         id="settings-section"

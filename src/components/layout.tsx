@@ -5,6 +5,7 @@ import { TooltipProvider } from "./ui/tooltip";
 import SideNav from "@/sections/navigation/side-nav/SideNav";
 import { NavigationRoutes } from "@/sections/navigation/navigationsRoute";
 import Header from "@/sections/header/header";
+import { Separator } from "./ui/separator";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [isCollapsed, setIsCollapsed] = useState(true);

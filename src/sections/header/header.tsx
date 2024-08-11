@@ -13,7 +13,7 @@ export default function Header() {
     );
   };
   return (
-    <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 py-2 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+    <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 py-2 sm:static sm:h-auto sm:border sm:border-muted-background sm:bg-background sm:mx-6 sm:rounded-xl">
       <MobileSideNav links={NavigationRoutes} isOpen={true}>
         <Button size="icon" variant="outline" className="sm:hidden">
           <PanelLeft className="h-5 w-5" />

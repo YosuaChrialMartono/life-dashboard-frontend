@@ -30,8 +30,8 @@ export const NavigationRoutes: NavRouteItem[] = [
   },
 
   {
-    title: "Calendar",
-    link: "/calendar",
+    title: "Events",
+    link: "/events",
     startIcon: CalendarDays,
     endIcon: null,
   },
